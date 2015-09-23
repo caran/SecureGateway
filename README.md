@@ -11,5 +11,8 @@ in the Secure Gateway. See a neighbouring repository here on Caran open source p
 
 Also the 10+ page tutorial has been released. See the doc folder in this repository.
 
+The paper "Secure Gateway – A concept for an in-vehicle IP network bridging the infotainment and the safety 
+critical domains" was presesented at the ESCAR2015 USA conference. The paper is found in the doc folder.
+
 For more information, please contact caranopensource at semcon.com 
 
