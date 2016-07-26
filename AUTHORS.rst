@@ -11,7 +11,7 @@ Development Lead
 Contributors
 ------------
 
-Basim Ali
+Basim Ali <basim.ali@semcon.com>
 
 
 Acknowledgements
@@ -20,4 +20,3 @@ Acknowledgements
 The Python file structure is set up using the Cookiecutter tool: https://github.com/audreyr/cookiecutter
 
 Documentation is generated using the Sphinx tool: http://sphinx-doc.org/
-
