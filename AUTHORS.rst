@@ -11,7 +11,10 @@ Development Lead
 Contributors
 ------------
 
-Basim Ali <basim.ali@semcon.com>
+* Basim Ali
+* Markus Johansson
+* Chuan Jin
+* Gabriele Kasparaviciute
 
 
 Acknowledgements

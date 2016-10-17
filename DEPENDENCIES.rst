@@ -64,28 +64,28 @@ Installation commands for the dependencies
 ---------------------------------------------
 Core, and tools for usage on embedded Linux machines::
 
-    sudo apt-get install can-utils
-    sudo apt-get install mosquitto
-    sudo apt-get install mosquitto-clients
-    sudo apt-get install python3-pip
-    sudo pip3 install paho-mqtt
-    sudo pip3 install can4python
+    $ sudo apt-get install can-utils
+    $ sudo apt-get install mosquitto
+    $ sudo apt-get install mosquitto-clients
+    $ sudo apt-get install python3-pip
+    $ sudo pip3 install paho-mqtt
+    $ sudo pip3 install can4python
 
 Desktop examples, documentation and testing::
 
-    sudo apt-get install python3-tk
-    sudo apt-get install python3-matplotlib
-    sudo apt-get install build-essential libssl-dev libffi-dev python-dev  # For Paramiko
-    sudo pip3 install sphinx
-    sudo pip3 install sphinxcontrib-programoutput
-    sudo pip3 install sphinx_rtd_theme
-    sudo pip3 install coverage
-    sudo pip3 install paramiko
+    $ sudo apt-get install python3-tk
+    $ sudo apt-get install python3-matplotlib
+    $ sudo apt-get install build-essential libssl-dev libffi-dev python-dev  # For Paramiko
+    $ sudo pip3 install sphinx
+    $ sudo pip3 install sphinxcontrib-programoutput
+    $ sudo pip3 install sphinx_rtd_theme
+    $ sudo pip3 install coverage
+    $ sudo pip3 install paramiko
     
 For PDF, you also need to install (3 GByte)::
 
-    sudo apt-get install texlive-full
+    $ sudo apt-get install texlive-full
 
 Temporary requirements (before publishing on github)::
 
-    sudo apt-get install subversion
+    $ sudo apt-get install subversion

@@ -1,0 +1,19 @@
+{"entities":
+    {"signals":[
+        {"canName":"vehiclespeed"},
+        {"canName":"enginespeed"},
+        {"canName":"indoortemperature",
+         "canMultiplier": 1.0,
+         "mqttName":"actualindoortemperature",
+         "mqttType":"float",
+         "mqttEcho":false,
+         "toCan":false,
+         "fromCan":true
+        },
+        {"canName":"acstatus",
+         "mqttName":"aircondition",
+         "mqttEcho":true,
+         "toCan":true,
+         "fromCan":false}
+    ]}
+}

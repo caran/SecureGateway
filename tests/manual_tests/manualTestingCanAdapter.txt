@@ -1,0 +1,79 @@
+Manual testing of the canadapter
+--------------------------------
+
+In the directory tests/manual_tests::
+
+    canadapter parsingspeed.kcd -mqttfile parsingspeed.json -v
+
+or::
+
+    canadapter parsingspeed.kcd -listentoallcan -v
+
+
+    ../../scripts/canadapter parsingspeed.kcd -mqttfile parsingspeed.json -v
+
+
+Recommended input CAN data
+--------------------------
+Test with single frames:
+    cansend vcan0 007#0000000000000000
+    cansend vcan0 007#FFFFFFFFFFFFFFFF
+
+Test with generated CAN data (approx 90 % busload at 500 kbit/s):
+  cangen vcan0 -I 007 -L 8 -D i -g 0.14
+
+Send a fixed number of CAN frames with a specific ID, at very high speed:
+   cangen vcan0 -I 007 -L 8 -D i -n 10000 -g 0.01 
+
+Verify input:
+   candump vcan0
+
+
+Output
+------
+Watch all MQTT data:
+    mosquitto_sub -v -t +/#
+    
+Watch one of the signals: 
+    mosquitto_sub -v -t data/canadapter/testsignal2
+    
+Count number of MQTT messages:
+    mosquitto_sub -v -t data/canadapter/testsignal2 > out.txt
+    cat out.txt | wc -l
+    
+    
+    
+Measuring processor load
+------------------------
+For the processor load, use an unlimited number of frames from cangen.
+The command 'top' is used to find the processor load per process. 
+
+Do this for different frames-space times.
+
+
+Are there any lost frames?
+--------------------------
+Send a fix number of frames, and count the number of received messages by mosquitto_sub.
+
+Do this for different frames-space times.
+
+    
+Results
+-------
+For desktop Ubuntu on vcan0, a frame spacing of approx 0.6 ms or less will give missing frames.
+
+For a BeagleBone receiving data via a physical 500 kbit/s CAN bus, a frame spacing of 
+approx 6 ms or less will give missing frames.
+
+
+
+
+OTHER INVOCATIONS
+-----------------
+    
+python3 canadapter.py ../../VICTALAB/VICTALAB_CAN.kcd -mqttfile ../../VICTALAB/VICTALAB_mqttsignals.json 
+
+python3 canadapter.py ../../VICTALAB/VICTALAB_CAN.kcd -listentoallcan
+    
+
+

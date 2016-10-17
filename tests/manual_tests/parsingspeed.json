@@ -1,0 +1,7 @@
+{"signals":[
+    {"canName":"testsignal1", "mqttName":"testsignal1"},
+    {"canName":"testsignal2", "mqttName":"testsignal2"},
+    {"canName":"testsignal3", "mqttName":"testsignal3"},
+    {"canName":"testsignal4", "mqttName":"testsignal4"}
+]}
+

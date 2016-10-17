@@ -1,0 +1,28 @@
+{"entities":{
+    "signals":[
+            {"canName":"ADAS_Posn_MsgType", "mqttType":"int"},
+            {"canName":"ADAS_Posn_Offset"},
+            {"canName":"ADAS_ProfShort_CtrlPoint", "mqttType":"int"}],
+    "aggregates":[
+        {"mqttName":"ADAS_Posn_1",
+         "signals":[
+            {"canName":"ADAS_Posn_MsgType", "mqttType":"int"},
+            {"canName":"ADAS_Posn_Offset", "mqttName":"Position_offset"},
+            {"canName":"ADAS_Posn_CycCnt", "mqttType":"int"},
+            {"canName":"ADAS_Posn_Spd"}]},
+        {"mqttName":"ADAS_Posn_2",
+         "signals":[
+            {"canName":"ADAS_Posn_PosProbb"},
+            {"canName":"ADAS_Posn_CurLane"}]},
+        {"mqttName":"ADAS_Seg",
+         "toCan":true,
+         "fromCan":false,
+         "signals":[
+            {"canName":"ADAS_Seg_MsgType", "mqttType":"int"},
+            {"canName":"ADAS_Seg_Offset"},
+            {"canName":"ADAS_Seg_CycCnt", "mqttType":"int"},
+            {"canName":"ADAS_Seg_EffSpdLmt"},
+            {"canName":"ADAS_Seg_EffSpdLmtType"}]}
+        ]
+    }
+}

@@ -47,8 +47,8 @@ class BaseFramework:
     Parameters:
         name (str): Name of the app/resource. For resources, it is also used
             in the MQTT topic hierarchy.
-        host (str): Broker host name
-        port (int): Broker port number
+        host (str): Broker host name.
+        port (int): Broker port number.
         certificate_directory (str or None): Full path to the directory
             of the certificate files.
 
@@ -58,8 +58,8 @@ class BaseFramework:
             broker can not handle ``MQTTv311``.
         tls_version (enum in the ssl module): SSL protocol version,
             defaults to ``ssl.PROTOCOL_TLSv1``
-        qos (int): MQTT quality of service. 0, 1 or 2. Se Paho
-            documentation. Default value ``DEFAULT_QOS``, which is set in :mod:`sgframework.constants`.
+        qos (int): MQTT quality of service. 0, 1 or 2. See Paho
+            documentation. Default value ``DEFAULT_QOS`` is set in :mod:`sgframework.constants`.
         timeout (numerical): MQTT socket timeout, when running the ``loop()``
             method. Default value ``DEFAULT_TIMEOUT``.
         keepalive (numerical): MQTT keepalive message interval.
@@ -103,6 +103,7 @@ class BaseFramework:
     ``CERTFILE`` and ``KEYFILE``.
 
     """
+    # Constants useful for users of this library
     CA_CERTS = constants.CA_CERTS
     KEYFILE = constants.KEYFILE
     CERTFILE = constants.CERTFILE
@@ -829,7 +830,7 @@ class Resource(BaseFramework):
                                     self.name,
                                     datainformation.signalname)
             self.mqttclient.publish(dataavailable_topic,
-                                    self.PAYLOAD_TRUE,
+                                    constants.PAYLOAD_TRUE,
                                     qos=self.qos,
                                     retain=True)
             self.logger.debug("    Capabilities: {}'".format(dataavailable_topic))
@@ -852,7 +853,7 @@ class Resource(BaseFramework):
                                         self.name,
                                         commandinformation.signalname)
             self.mqttclient.publish(commandavailable_topic,
-                                    self.PAYLOAD_TRUE,
+                                    constants.PAYLOAD_TRUE,
                                     qos=self.qos,
                                     retain=True)
             self.logger.debug("    Capabilities: '{}'".format(commandavailable_topic))

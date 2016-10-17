@@ -1,0 +1,92 @@
+<!--
+
+CAN configuration example file, for use with the CAN adapter of the Secure Gateway concept architecture.
+Based on the KCD file format (LGPL licensed). See: http://kayak.2codeornot2code.org/
+
+Author: Jonas Berg
+Copyright (c) 2015, Semcon Sweden AB
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted
+provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,  this list of conditions and
+   the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the Semcon Sweden AB nor the names of its contributors may be used to endorse or
+   promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+
+
+<NetworkDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://kayak.2codeornot2code.org/1.0" xsi:noNamespaceSchemaLocation="Definition.xsd">
+    <Document name="Vehicle simulator"></Document>
+    <Bus name="Mainbus">
+        <Message id="0x100" name="POSITION">
+            <Signal name="ADAS_Posn_MsgType" offset="5" length="3" endianess="big"/>
+            <Signal name="ADAS_Posn_Offset" offset="8" length="13" endianess="big"/>
+            <Signal name="ADAS_Posn_CycCnt" offset="22" length="2" endianess="big"/>
+            <Signal name="ADAS_Posn_PathIdx" offset="16" length="6" endianess="big"/>
+            <Signal name="ADAS_Posn_Idx" offset="30" length="2" endianess="big"/>
+            <Signal name="ADAS_Posn_PosProbb" offset="25" length="5" endianess="big"/>
+            <Signal name="ADAS_Posn_Age" offset="32" length="9" endianess="big"/>
+            <Signal name="ADAS_Posn_PosConfdc" offset="44" length="3" endianess="big"/>
+            <Signal name="ADAS_Posn_CurLane" offset="41" length="3" endianess="big"/>
+            <Signal name="ADAS_Posn_Spd" offset="48" length="9" endianess="big"/>
+            <Signal name="ADAS_Posn_RelHead" offset="56" length="8" endianess="big"/>
+        </Message>
+        <Message id="0x101" name="SEGMENT">
+            <Signal name="ADAS_Seg_MsgType" offset="5" length="3" endianess="big"/>
+            <Signal name="ADAS_Seg_Offset" offset="8" length="13" endianess="big"/>
+            <Signal name="ADAS_Seg_CycCnt" offset="22" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_PathIdx" offset="16" length="6" endianess="big"/>
+            <Signal name="ADAS_Seg_Tunnel" offset="30" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_Bridge" offset="28" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_BuildUpArea" offset="26" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_Retr" offset="25" length="1" endianess="big"/>
+            <Signal name="ADAS_Seg_Update" offset="24" length="1" endianess="big"/>
+            <Signal name="ADAS_Seg_RelProbb" offset="35" length="5" endianess="big"/>
+            <Signal name="ADAS_Seg_FuncRoadClass" offset="32" length="3" endianess="big"/>
+            <Signal name="ADAS_Seg_PartOfCalcRoute" offset="46" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_CmplxInsct" offset="44" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_FromOfWay" offset="40" length="4" endianess="big"/>
+            <Signal name="ADAS_Seg_EffSpdLmt" offset="51" length="5" endianess="big"/>
+            <Signal name="ADAS_Seg_EffSpdLmtType" offset="48" length="3" endianess="big"/>
+            <Signal name="ADAS_Seg_DividedRoad" offset="61" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_NumOfLaneOppDir" offset="59" length="2" endianess="big"/>
+            <Signal name="ADAS_Seg_NumOfLaneDrvDir" offset="56" length="3" endianess="big"/>
+            <Producer>
+                <NodeRef id="1"/>
+            </Producer>
+        </Message>
+        <Message id="0x104" name="PROFILE_SHORT">
+            <Signal name="ADAS_ProfShort_MsgType" offset="5" length="3" endianess="big"/>
+            <Signal name="ADAS_ProfShort_Offset" offset="8" length="13" endianess="big"/>
+            <Signal name="ADAS_ProfShort_CycCnt" offset="22" length="2" endianess="big"/>
+            <Signal name="ADAS_ProfShort_PathIdx" offset="16" length="6" endianess="big"/>
+            <Signal name="ADAS_ProfShort_ProfType" offset="27" length="5" endianess="big"/>
+            <Signal name="ADAS_ProfShort_CtrlPoint" offset="26" length="1" endianess="big"/>
+            <Signal name="ADAS_ProfShort_Retr" offset="25" length="1" endianess="big"/>
+            <Signal name="ADAS_ProfShort_Update" offset="24" length="1" endianess="big"/>
+            <Signal name="ADAS_ProfShort_AccurClass" offset="38" length="2" endianess="big"/>
+            <Signal name="ADAS_ProfShort_Dist1" offset="44" length="10" endianess="big"/>
+            <Signal name="ADAS_ProfShort_Value0" offset="50" length="10" endianess="big"/>
+            <Signal name="ADAS_ProfShort_Value1" offset="56" length="10" endianess="big"/>
+        </Message>
+        <!--<Message id="0x009" name="climatesimulationdata">
+            <Signal name="indoortemperature" offset="8" length="11" endianess="big">
+                <Value type="unsigned" slope="0.1" intercept="-50"/>
+            </Signal>
+        </Message>-->
+    </Bus>
+</NetworkDefinition>

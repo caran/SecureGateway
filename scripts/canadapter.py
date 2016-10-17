@@ -89,7 +89,7 @@ def init_canadapter():
     commandlineparser.add_argument('-mqttfile',
                                    default=None,
                                    help="File name for mqtt-and-CAN signal name and permission translation (JSON). " +
-                                        "Defaults trro listen to all CAN signals (no JSON file used).")
+                                        "Defaults to listen to all CAN signals (no JSON file used).")
     commandlineparser.add_argument('-v',
                                    action='count', default=0,
                                    help="Increase verbosity level. Can be repeated.")
@@ -145,7 +145,7 @@ def init_canadapter():
                                    nargs='+',
                                    default=["1"],
                                    help="Set ego node id (string), for defining which of the frames in the " +
-                                   "KCD file should be sent, and which should be received. Several ids can be given. "
+                                   "KCD file should be sent. By default other frames are received. Several ids can be given. "
                                    "Defaults to '%(default)s'. " +
                                    "See KCD file definition documentation.")
 

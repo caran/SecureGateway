@@ -8,3 +8,10 @@ History
 ---------------------
 
 * First release on GitHub.
+
+
+0.2.0 (2016-10-17)
+---------------------
+
+* Improved documentation
+* Examples included
