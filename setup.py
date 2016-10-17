@@ -23,7 +23,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Jonas Berg",
     author_email='caranopensource@semcon.com',
-    url='https://github.com/caran/sgframework',
+    url='https://github.com/caran/SecureGateway',
     packages=['sgframework'],
     package_dir={'sgframework': 'sgframework'},
     scripts=['scripts/canadapter', 'scripts/servicemanager', 'scripts/canadapterlib.py'],
