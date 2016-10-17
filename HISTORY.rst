@@ -4,7 +4,7 @@
 History
 =======
 
-0.2.1 (2016-10-17)
+0.2.1 - 0.2.2 (2016-10-17)
 ---------------------
 
 * Documentation dependency update for readthedocs.org
