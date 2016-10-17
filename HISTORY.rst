@@ -4,10 +4,10 @@
 History
 =======
 
-0.1.0 (2016-07-26)
+0.2.1 (2016-10-17)
 ---------------------
 
-* First release on GitHub.
+* Documentation dependency update for readthedocs.org
 
 
 0.2.0 (2016-10-17)
@@ -15,3 +15,10 @@ History
 
 * Improved documentation
 * Examples included
+
+
+
+0.1.0 (2016-07-26)
+---------------------
+
+* First release on GitHub.
