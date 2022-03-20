@@ -18,7 +18,7 @@ Run the canadapter::
 
 To download the example files and test files, you need to use::
  
-    $ git clone https://github.com/caran/sgframework.git
+    $ git clone https://github.com/caran/SecureGateway.git
 
 In order to run tests, you might need to enable the virtual CAN bus. On Debian::
 
