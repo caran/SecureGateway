@@ -4,6 +4,7 @@ Installation
 
 At the command line::
 
+    $ pip3 install wheel
     $ pip3 install sgframework
 
 This will also install the dependencies ``paho-mqtt`` and ``can4python``.
